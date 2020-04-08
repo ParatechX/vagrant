@@ -1,0 +1,5 @@
+Host github.com
+  Hostname github.com
+  User git
+  StrictHostKeyChecking no
+  IdentityFile /home/vagrant/.ssh/authorized_github_key

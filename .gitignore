@@ -1,0 +1,7 @@
+.vagrant
+local.config.yml
+*.log
+files/local
+.vscode
+live_code/*
+files/shared_keys/*

@@ -1,0 +1,53 @@
+
+# Git
+alias g="git "
+alias gs="git status"
+alias gf="git fetch --all"
+
+# Command Hacks
+alias ls="ls -la"
+
+# Customisation Hacks
+alias alad="nano ~/.bashrc"
+alias algr=". ~/.bashrc"
+
+# Redirects
+alias cdu="cd ~/"
+alias www="cd /var/www/html/"
+alias cdlib="cd /var/www/lib/"
+alias cdetc="cd /etc/"
+alias cdinit="cd /etc/init.d/"
+alias cdhttp="cd /etc/apache2/"
+alias cdphp="cd /etc/php5/"
+alias cdlog="cd /var/log/"
+alias cdloghttp="cd /var/log/apache2/"
+
+# Apache
+alias wwwgr="sudo service apache2 graceful"
+
+# Services
+alias webstat="sudo service apache2 status"
+alias dbstat="sudo service mysqld status"
+alias erlog="sudo tail -n300 /var/log/apache2/error.log"
+
+# Misc
+alias hs=history
+alias pd=pushd
+alias pp=popd
+alias cl=clear
+alias swon="sudo swapon /swapfile"
+alias swoff="sudo swapoff"
+
+#laravel
+alias art="php artisan"
+alias tart="php artisan tinker"
+alias codu="composer du"
+alias xtest="php -d xdebug.profiler_enable=on 'vendor/bin/phpunit'"
+alias test="vendor/bin/phpunit"
+
+# anything else?
+alias api="cd /var/www/backend/"
+alias tunneldb="ssh -f vagrant@192.168.100.102 -i ~/ssh/github_rsa -L 3307:localhost:3306 -N"
+alias dbt="mysql -h 127.0.0.1 -P3307 -p" #vagrant password
+alias xtest="php -d xdebug.profiler_enable=on ./vendor/bin/phpunit"
+alias xftest="php -d xdebug.profiler_enable=on ./vendor/bin/phpunit --filter"

@@ -1,0 +1,2 @@
+# is this useful for anything??
+export XDEBUG_CONFIG=\"idekey=$IDE_KEY\"

@@ -1,0 +1,42 @@
+# dot box specifics
+---
+- memory: 1024
+
+  # the main site for this vm
+  hostname: "dev.dot.paratech.local"
+
+  # using vagrant-hostmanager to add entry in /etc/hosts
+  aliases: false
+
+  # enable subdomains via landrushs wildcard matching on the hostname above
+  subdomains_on_hostname: true
+
+  # set a dedicated ip for xdebug to listen on
+  ip: "192.168.100.102"
+
+  apps:
+    backend:
+      sync:
+        local: "~/code/bcs/dot/backend/"
+        virtual: "/var/live_code/backend/"
+
+  # contains the provision template files. only adjust if you know what you are doing!
+  box_folder:
+    local: "files/"
+    virtual: "/var/vagrant"
+
+  # looks for and copies id_rsa from host to guest
+  ssh_folder:
+    local: "~/.ssh/"
+    # holding location for folder sharing, certs will be distributed into actual ~/.ssh on provision
+    virtual: "/home/vagrant/ssh"
+
+  # have your own ideas? add them via custom bootstrap?
+  bootstrap: "bionic64.sh"
+
+  ide_key: "VSCODE"
+
+  auth_key:
+    private: "~/.ssh/id_rsa"
+    public: "~/.ssh/id_rsa.pub"
+    github: "~/.ssh/github_rsa"
